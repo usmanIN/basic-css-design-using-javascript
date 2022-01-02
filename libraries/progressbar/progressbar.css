@@ -1,0 +1,26 @@
+
+div#skillbar div>div::before{
+    content: " ";
+    padding: 10px;
+    position: relative;
+    bottom: 6px;
+    background: #494d5f;
+    float: right;  
+    border-radius: 50%;
+  }
+  div#skillbar{
+    width: 100%;  
+    margin-bottom: 5px;
+  }
+  div#skillbar> span{
+    display: inline-block;
+    color: #FFF;/*#4F9CC0;*/
+    font-size: 12px;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;  
+  }
+  div#skillbar> span:nth-child(2) {
+    float: right;
+  }  
+  

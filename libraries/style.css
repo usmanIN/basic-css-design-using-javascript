@@ -1,0 +1,568 @@
+@import url("progressbar.css");
+@import url("bubble.css");
+
+*{
+  margin: 0;
+  padding: 0;
+}
+p#hireMe {
+  text-decoration: none;
+  display:absolute;
+  
+  width:100px;
+  height:50px;
+  color: #131720;
+  background: #fff;
+  text-align:center;
+  margin-top: 10%;
+  padding:5px;
+  font-size: 24px;
+  font-weight: 400;
+  transform: rotate(-30deg) skew(25deg) translate(0,0); /*skew(15deg)*/
+  transition:.5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+p#hireMe:before {
+  content: '';
+  position: absolute;
+  top:10px;
+  left:-20px;
+  height:100%;
+  width:20px;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+p#hireMe:after {
+  content: '';
+  position: absolute;
+  bottom:-20px;
+  left:-10px;
+  height:20px;
+  width:100%;
+  background: #b1b1b1;
+  transform: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+p#hireMe:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+  color: white;
+}
+p#hireMe:hover, p#hireMe:hover:before, p#hireMe:hover:after{
+  background: #3b5998;
+}
+
+body{
+  font-family: 'Quicksand';  
+  background: url('../image/geometric.jpg') no-repeat;
+  background-size: cover;
+}
+.main-content{
+  background: #302C40;
+  height: 100%;
+  border-radius: 25px;  
+  margin-top: 1%;
+}
+
+.blue {  color: #29b6f6;  }
+.green {  color: #9ccc65; }
+.purple {  color: #ba68c8;  }
+.cyan {  color: #4dd0e1;  }
+.red {  color: #ef5350; }
+
+.title-lg{ 
+  color:#ef5350;   
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.title-sub{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.opener{  
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+.card-opener{  
+  perspective: 150rem;
+  height: 20rem;
+  width: 30rem;
+  position: relative;
+  font-size: 20px;
+}
+.card-opener>div {
+  height: 15rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.card-opener>.card-front {background: transparent; }
+
+.card-front > div{
+  height: 15rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img{   
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  perspective: 600px;
+}
+.profile-img>.profile-content{  
+  position: relative;  
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.profile-img>.profile-content:hover{  
+  transform: rotateY(180deg);
+}
+.profile-img>.profile-content>.profile{
+  width: 150px;
+  margin: 10px;
+  object-fit: cover;
+  box-shadow: 0 30px 60px -6px black;
+  filter: grayscale(100%);
+  border-radius: 50%;  
+}
+.profile-img>.profile-content>.profile:hover{
+  filter: grayscale(0);
+  transition: 1s linear all;
+}
+.profile-img>.profile-content>.profile:first-child{
+  position: absolute;
+}
+.profile-img>.profile-content>.profile:first-child{
+  transform: rotateY(180deg);
+}
+.theme-color{
+  background-color:  #0279B8;	
+}
+.theme-cornor{
+    border-radius: 25px;
+    opacity: 0.9;
+}
+.content{
+    color: #FFF;
+    background-color: transparent;
+    padding: 20px;
+    height: 90vh;
+    position: relative;
+    overflow-y: scroll;     
+}  
+.content::-webkit-scrollbar {
+  width: 10px;
+}
+.content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+/*
+.content:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -18px;
+  left: -18px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+  animation: topanimation1 1s linear 1;
+}
+
+
+@keyframes topanimation1{
+  0%{
+    transform: scale(1);        
+  }
+  100%{
+    transform: scale(100);
+  }
+}
+*/
+
+
+#main{
+  overflow: hidden;
+  transform: scale(0.9);
+}
+
+.badge-pill{
+  background: #0279b8;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-size: 16x;
+  position: relative;
+  height: 24px;
+  line-height: 24px;
+  margin: 5px;
+  transition: 0.5s linear all;
+}
+.badge-pill:hover{
+  background: none;  
+}
+
+.menubar{
+    text-align: center;
+    background: transparent;
+    margin-bottom: 10px;        
+}
+
+.menubar a{  
+  color: #131720;  
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  width:60px;
+  height:60px;  
+}
+
+.menubar a i{    
+  position: relative;
+  text-align:center;
+  padding: 10px;  
+  box-sizing: border-box;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: .5s;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.menubar a i:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-decoration:none;
+}
+
+
+
+
+.filter{
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.filter a+a:before {
+  padding: 8px;
+  color: black;
+  content: "|\00a0";
+}
+.filter a{
+  color: #FFF;
+  font-weight: 800;  
+  border-radius: 10px 10px 5px 5px;
+  display: inline;
+  text-decoration: none;
+}
+
+
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.services{
+  display: inline-block;    
+  margin: 10px;
+}
+.services>.services-content{
+  height: 300px;
+  width: 300px;  
+  text-align: center;
+  background-color: #131720;
+  padding: 50px;
+  box-shadow: 0 10px 15px #1B2735;
+}
+.services>.services-content>.title-sub{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+
+.project{      
+  float: left;
+  color: #1c1c1c;
+  border: 3px solid white;  
+  margin: 1%;
+  transition: transfom 0.5s; 
+  height: 100%; 
+  z-index: 1;
+  opacity: .9;
+}
+
+.project>.project-title{            
+  box-shadow: 1px 1px 5px 1px #989898;
+  transform-origin:center;
+  color: #FFF;
+  font-size: larger;  
+  width: 200px;
+  height: 250px;  
+}
+.project>.project-title> img{            
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes popUpContent {
+  0%{
+    transform:rotateX(60deg) skew(-5deg);
+  }
+  100%{
+    transform:rotateX(0deg) skew(0deg);
+  }
+}
+
+.link{
+  font-size: 40px;
+  text-align: center;
+}
+.link a{
+  text-align: center;
+  max-width: 300px;
+  max-height: 200px;    
+  color: #fff; 
+  margin: 0 auto;   
+  display: inline;
+}
+.link i{    
+  object-fit:cover;
+  padding: 5%;  
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  border-radius: 10px;
+  background: #333;  
+  justify-content: center; 
+  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);  
+  transform-origin:center;
+  transform:perspective(400px) rotateY(25deg);
+  transition: 0.5s;  
+}
+
+.link a h2{
+  font-size: 10px;
+	background: tomato;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px 0;
+  margin: 0;
+	position: absolute;
+  bottom: 1px;
+  left: 0;
+	width: 100%;
+  transform-origin: right;
+	transform: perspective(400px) rotateY(90deg);
+	transition: 0.5s;
+}
+
+.link a:hover h2
+{
+	transform: perspective(400px) rotateY(0deg);
+}
+.link i:hover{
+  background: #00838d;
+  transform:perspective(400px) rotateY(0deg);
+}
+
+.link a:hover{
+  text-decoration: none;
+}
+
+.card-profile-content{
+  object-fit: cover;
+  margin-bottom: 15px;
+  background: none;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  /*background-color:  #0279B8;	*/
+  border: 1px solid #0279B8;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit; 
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: none;
+  border: 4px solid #0279B8;/*#FF9F55;*/
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+  
+/* Place the container to the right */
+.timeline-right {
+  left: 5%;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 20px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid  #0279B8;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent  #0279B8 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+  left: -12px;
+}
+
+/* The actual content */
+.timeline-content {
+  padding: 20px 30px;
+  border: 1px solid #0279B8;	
+  position: relative;
+  color: #FFF;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px #00838d;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 700px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 28px;
+  }
+  
+    .project{      
+    float: none;
+    color: #1c1c1c;
+    border: none;      
+    transition: transfom 0.5s linear;     
+  }
+  
+  .project>.project-title{            
+    box-shadow: none;
+    margin: 5%;
+    width: 100%; 
+  }
+
+
+  /* Full-width containers */
+  .timeline-container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-container::before {
+  left: 60px;
+  border: medium solid #0279B8;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #0279B8 transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .timeline-left::after, .timeline-right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .timeline-right {
+  left: 0%;
+  }
+
+  .menubar{
+    position: fixed;
+    top:0;
+    right: 0;
+    justify-content: end;
+    width: 100%;
+    z-index: 1;    
+    background: #1c1c1c;
+    font-size: 26px;   
+  }
+  
+  .menubar a{  
+    color: #FFF;      
+    display: inline;  
+  }
+  .menubar a i{
+    padding: 10px;
+    background: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  body{
+    margin:5%;
+    background: url('image/backMobile.jpg') no-repeat;
+    background-size: cover;    
+  }
+}
