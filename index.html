@@ -1,8 +1,36 @@
-<div id="demo">
-    <h1>Hello</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="./libraries/progressbar/progressbar.css"/> -->
+    <style>
+.container{    display: flex; justify-content: space-around;width: 100%;}
+    </style>
+</head>
+<body>
+    
+    
+<div id="demo"></div>
+        
+<script src="./design.js"></script>    
+<script>        
+    design("#demo").skillBar({
+        skill:{laptop: 5,mobile:7},
+        text:{
+            "font-size":"18px",
+            "font-weight":"800",
+            "text-transform":"uppercase"
+        },
+        barColor:"orange",
+        barBackground: "yellow",
+        
+    });
 
-<script src="./design.js"></script>
-<script>
-    console.log(design("#demo").bubble());
+    
 </script>
+</body>
+</html>

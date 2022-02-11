@@ -19,12 +19,11 @@
 
        $(this).children("span").css({                	
                "position": "absolute",                  
-               "display":"block",
-               "width":"10px",
-               "height": "10px",           
-               "background": " rgba(255, 255, 255, 0.2)",
-               "animation": "animate 25s linear infinite",
-              "bottom": "-150px"                 
+               "display":"block",        
+               //"background": " rgba(255, 255, 255, 0.2)",
+               "animation": "bubble 25s linear infinite",
+              "bottom": "-150px",                 
+              "border-radius":"50%"
         });
 
         $(this).children("span").each(function(){               		

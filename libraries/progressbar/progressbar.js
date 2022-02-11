@@ -37,7 +37,7 @@
         });
  
         selector.children().children("div").css({          
-         position:"relative",
+         "position":"relative",
          "display" : "block",
          "width" : "100%",
          "height" : "10px",
