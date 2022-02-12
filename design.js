@@ -148,6 +148,15 @@ let design = function(selectors){
        return self;
     }
 
+    
+
+
+
+
+
+
+
+
     return self;
     
 }
