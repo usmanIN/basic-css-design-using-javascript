@@ -6,7 +6,7 @@ This design library used for the purpose of reduce the time for code the basic d
 
 Library is access without import other libarary.
 
-## Installation
+## Installation [Preview](https://usmanin.github.io/js-design-libraries/)
 
     a) npm module
     b) cdn

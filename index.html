@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>     -->
+    <style>
+        .container{ padding: 0 15%; margin-top: 5%;}
+        .row{   display: flex;  justify-content: space-between; align-items: center; margin: 10px;  background: whitesmoke; padding: 5% 0;}
+        .col{   width: 100%;    padding: 10px;  height: 100%;   }
+        body{   background: #CCC;   }
+    </style>
+</head>
+<body>
+    
+    
+<div class="container">
+    <h1 style="font-size: 50px; text-align: center;">JS Design Libraries</h1>
+    <div class="row">
+        <div class="col">
+            <div id="demo"></div>
+        </div>
+        <div class="col">
+            <h1> Call to Action</h1>
+            <button id="bubble">Bubble</button>
+            <button id="tagCloud">Tag Cloud</button>
+            <button id="bar"> Skill Bar</button>
+            <button id="typewriter">Typewriter</button>     
+        </div>
+    </div>
+</div>
+
+        
+<script src="./design.min.js"></script>    
+<script>        
+
+document.querySelectorAll("button").forEach(function(e){
+        e.addEventListener("click",function(){
+            document.querySelector("#demo").innerHTML = "";
+        });
+   });
+
+document.querySelector("#bubble").addEventListener("click",function(){
+    design("#demo").bubble({
+        count:50,
+        background:"#072f5f",
+        size:"50px"
+    });   
+});
+
+    
+
+document.querySelector("#bar").addEventListener("click",function(){
+    design("#demo").skillBar({
+        skill:{laptop: 5,mobile:7},
+        text:{
+            "font-size":"18px",
+            "font-weight":"800",
+            "text-transform":"uppercase"
+        },
+        barColor:"",
+        background: "",
+        animate:true
+    });
+});
+document.querySelector("#tagCloud").addEventListener("click",function(){
+     design("#demo").tagCloud({
+        data:["Javascript","CSS","HTML"],
+        text:{
+            background:"yellow",
+            color:"green",
+            margin:"20px"
+        }
+    });
+});
+document.querySelector("#typewriter").addEventListener("click",function(){
+    design("#demo").typewriter({
+        data:["Captain","IRONMAN"],
+        text:{
+            color:"red",            
+            "font-size":"80px",
+            "font-weight":"800"
+        }
+    });
+});
+
+    
+</script>
+</body>
+</html>
